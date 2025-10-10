@@ -7,6 +7,11 @@ terraform {
   }
 
   required_version = ">= 1.13"
+
+  backend "s3" {
+    bucket         = "j-llm-tf-state-bucket-dev"
+    key            = "bootstrap/terraform.tfstate"
+  }
 }
 
 provider "aws" {
