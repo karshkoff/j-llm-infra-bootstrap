@@ -2,10 +2,7 @@ resource "aws_s3_bucket" "tf-backend" {
   bucket        = "j-llm-tf-state-bucket-dev"
   force_destroy = true
 
-  tags = {
-    project = "j-llm"
-    repo    = "https://github.com/karshkoff/j-llm-infra-bootstrap"
-  }
+  tags = var.tags
 }
 
 
